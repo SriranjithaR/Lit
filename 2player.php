@@ -11,7 +11,6 @@
 	   <button id="go" value="Go">Go    </button>
 	
     <div id ="comments">
-		Hey
 	</div>
 
 
@@ -34,18 +33,6 @@
 
                 $("#comment").val("");
             },
-            /* function(result){
-                $.each(result,function(index,elt){
-                    $("#comments").append("<p><span style='color:red'>"+elt.user+"</span>  "+elt.comments+"</p>");
-                });
-                },
-            *//*error : function(result){
-                alert(result.status);
-                $.each(result,function(index,elt){
-                    $("#comments").append("<p><span style='color:red'>"+elt.user+"</span>  "+elt.comments+"</p>");
-                });
-            }
-            */
 
             });
     });
