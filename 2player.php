@@ -6,7 +6,7 @@ Adding the first line.
 
 <body id="body">
 <form>
-       <input type="hidden" id="user" name="user" value="Gingy"> 
+       <input type="hidden" id="user" name="user" value=<?php echo $_GET['user']?>> 
 	   <input type="text" id="comment" name="comment" placeholder="Enter your comment"/>
 	   <button id="go" value="Go">Go    </button>
 </form>
