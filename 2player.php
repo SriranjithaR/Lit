@@ -5,18 +5,19 @@ Adding the first line.
 </head>
 
 <body id="body">
-
+<form>
        <input type="hidden" id="user" name="user" value="Gingy"> 
 	   <input type="text" id="comment" name="comment" placeholder="Enter your comment"/>
 	   <button id="go" value="Go">Go    </button>
-	
+</form>
     <div id ="comments">
 	</div>
 
 
 <script>
   $(document).ready(function () {
-    $("#go").click(function(){
+    $("#go").click(function(e){
+        e.preventDefault();
         $.ajax({
             url: "php/enterDb.php", 
             type: "POST", 
@@ -27,6 +28,7 @@ Adding the first line.
             success: function(result){
                 
                alert("result");
+               $("#comments").empty();
                $.each(result,function(index,elt){
                     $("#comments").append("<p><span style='color:red'>"+elt.user+"</span>  "+elt.comments+"</p>");
                 });
